@@ -19,16 +19,16 @@ const [para , setparametr] = useState()
    
    let result;
 
-   useEffect(() => {
-    const requestOptions = {
-        method: 'post',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ access_token: `${token}`, clientID:'p2ptest01',docType:'issued'})
-    };
-     result = fetch('https://182.72.231.115:8001/getDocList', requestOptions)
-        .then(response => response.json());
-        console.log(result.json())
-});
+//    useEffect(() => {
+//     const requestOptions = {
+//         method: 'post',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify({ access_token: `${token}`, clientID:'p2ptest01',docType:'issued'})
+//     };
+//      result = fetch('https://182.72.231.115:8001/getDocList', requestOptions)
+//         .then(response => response.json());
+//         console.log(result.json())
+// });
 
 function handleshow(){
    
@@ -45,7 +45,7 @@ setparametr(<p>
    
    return(
 <>
-{result}
+{/* {result} */}
 <h1>Digi locker login success...!</h1>
 <button onClick={handleshow}>ShowData</button>
 
