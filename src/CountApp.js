@@ -20,7 +20,7 @@ export default  function CountApp() {
        <Route  path="/" element = {<Compo1/>}> </Route>
             <Route  path="/home" element = {<Compo1/>}> </Route>
             <Route  path="/about" element = {<About/>}> </Route>
-            <Route path="/redirect"  element={<Digilogin />}> </Route>
+            <Route path="/redirect/:access_token :authorization_code :name"  element={<Digilogin />}> </Route>
        </Routes>
  </Router>
 </>
