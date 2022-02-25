@@ -114,3 +114,18 @@ button:hover{
   color: cyan;
   background-color: blue;
 }
+h1{
+  margin-left: 15%;
+  margin-right: 30%;
+  color: aliceblue;
+}
+
+p{
+  padding-left: 30px;
+  margin-left: 15%;
+  margin-right: 30%;
+  opacity: 1;
+  border-style: solid;
+  background-color:darkgray;
+  border-radius: 30px;
+}
