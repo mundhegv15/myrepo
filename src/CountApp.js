@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CountComponent from "./CountComponent";
 import './App.css'
+import Navbar from "./Navbar";
 
 export default  function CountApp() {
 
@@ -16,13 +17,8 @@ export default  function CountApp() {
 return(
 <>
 <div> 
-    {/* <h1>count:{count}
-   
-    </h1>
-    <span></span>
-    <label>name:</label>
-    <input type={"text"} value = {name} onChange = {handlenamechange} placeholder = {"child will set name..!"} ></input> */}
- <form className="Form">
+      <Navbar />
+      <form>
         <label>
           Name :
           <input type={"text"} name="fullname" value={name} placeholder="Full name" />
