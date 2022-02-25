@@ -12,7 +12,7 @@ function Compo1()
     <div>
     <form>
     
-      <label>
+      {/* <label>
         Name :
         <input type={"text"} name="fullname" placeholder="Full name" />
       </label>
@@ -33,7 +33,7 @@ function Compo1()
         />
       </label>
 <br>
-</br>
+</br> */}
       <label>
           Client Id :
           <input
