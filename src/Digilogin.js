@@ -1,4 +1,4 @@
-import React , {useState}from 'react';
+import React , {useState , useEffect}from 'react';
 import { useParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
@@ -17,6 +17,19 @@ const [para , setparametr] = useState()
    const rtoken = new URLSearchParams(search).get('refresh_token');
    const exptime = new URLSearchParams(search).get('expires_in');
    
+   useEffect(() => {
+    // GET request using fetch inside useEffect React hook
+    const body = {
+      "accessToken" : `${token}`,
+      "clientId" : "p2ptest01",
+      "docType" :   "issued"
+    }
+    fetch('"https://182.72.231.115:8001/Requester/getDocList',body)
+        .then(response => response.json()
+          .then(console.log(response.json()))
+          );
+}, []);
+
 
 function handleshow(){
    
