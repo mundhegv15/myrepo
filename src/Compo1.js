@@ -1,6 +1,7 @@
 import React , {useState} from "react";
 import refnum from "./refnum.mjs";
-let redirect_uri = "https://master.drdul8gu26jrd.amplifyapp.com/redirect";
+import './App.css'
+let redirect_uri = `https://master.drdul8gu26jrd.amplifyapp.com/${refnum}`;
 function Compo1()
 {
   const [client_id, setClientid] = useState(0);
@@ -53,6 +54,7 @@ function Compo1()
         </button>
         <input type={"hidden"} name="reference_id" value={refnum} />
         <input type={"hidden"} name="redirect_uri" value={redirect_uri} />        
+
 </form>
 </div>
   );
