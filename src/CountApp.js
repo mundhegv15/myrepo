@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
+import OneSignal from 'react-onesignal';
 import CountComponent from "./CountComponent";
 import './App.css'
 import Navbar from "./Navbar";
@@ -11,7 +12,14 @@ import refnum from "./refnum.mjs";
 
 
 
+
 export default  function CountApp() {
+
+  useEffect(() => {
+    OneSignal.init({
+      appId: "07b18ff8-7c5b-4dbc-a2c2-e6d4a974cee3"
+    });
+  }, []);
 
   return(
 <>
