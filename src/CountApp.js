@@ -21,11 +21,11 @@ export default  function CountApp() {
        <Route  path="/" element = {<Compo1/>}> </Route>
             <Route  path="/home" element = {<Compo1/>}> </Route>
             <Route  path="/about" element = {<About/>}> </Route>
-            <Route path = {`/${refnum}`}  element={<Digilogin />}> </Route>
+            <Route path = "/*"  element={<Digilogin />}> </Route>
        </Routes>
  </Router>
 </>
 );
 
 }
-
+// style={{window.innerWidth > 768 ? '800px' : '400px'}}

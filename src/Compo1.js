@@ -1,7 +1,10 @@
-import React , {useState} from "react";
+import React , {useState , useEffect} from "react";
 import refnum from "./refnum.mjs";
 import './App.css'
 let redirect_uri = `https://master.drdul8gu26jrd.amplifyapp.com/${refnum}`;
+
+
+
 function Compo1()
 {
   const [client_id, setClientid] = useState(0);
@@ -9,32 +12,24 @@ function Compo1()
     {
         setClientid(e.target.value);
    }
+
+   const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 768px)").matches
+  )
+
+  useEffect(() => {
+    window
+    .matchMedia("(min-width: 768px)")
+    .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
+
+
+
      return (
-    <div>
+    <div >
+      {matches && (<h1>Big Screen</h1>)}
+      {!matches && (<h3>Small Screen</h3>)}
     <form>
-    
-      {/* <label>
-        Name :
-        <input type={"text"} name="fullname" placeholder="Full name" />
-      </label>
-      <label>
-        DOB :
-        <input type={"text"} name="DOB" placeholder="00/00/0000" />
-      </label>
-      <label>
-        Address :
-        <input type={"text"} name="address" placeholder="Address" />
-      </label>
-      <label>
-        Aadhaar No :
-        <input
-          type={"text"}
-          name="aadhaar"
-          placeholder="0000-0000-0000"
-        />
-      </label>
-<br>
-</br> */}
       <label>
           Client Id :
           <input

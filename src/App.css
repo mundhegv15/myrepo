@@ -55,7 +55,7 @@ button {
   border: 2px solid rgb(31, 39, 46);
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 50px;
+  margin-left: 40px;
 }
 
 body{
@@ -104,22 +104,24 @@ p{
   border-radius: 30px;
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* 
+Extra small devices (phones, 600px and down)
 @media only screen and (max-width: 600px) {
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+Small devices (portrait tablets and large phones, 600px and up)
 @media only screen and (min-width: 600px) {
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+Medium devices (landscape tablets, 768px and up)
 @media only screen and (min-width: 768px) {
 } 
 
-/* Large devices (laptops/desktops, 992px and up) */
+Large devices (laptops/desktops, 992px and up)
 @media only screen and (min-width: 992px) {
 } 
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+Extra large devices (large laptops and desktops, 1200px and up)
 @media only screen and (min-width: 1200px) {
-}
+} */
