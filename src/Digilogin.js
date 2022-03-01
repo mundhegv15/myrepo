@@ -17,18 +17,6 @@ const [para , setparametr] = useState()
    const rtoken = new URLSearchParams(search).get('refresh_token');
    const exptime = new URLSearchParams(search).get('expires_in');
    
-   let result;
-
-//    useEffect(() => {
-//     const requestOptions = {
-//         method: 'post',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({ access_token: `${token}`, clientID:'p2ptest01',docType:'issued'})
-//     };
-//      result = fetch('https://182.72.231.115:8001/getDocList', requestOptions)
-//         .then(response => response.json());
-//         console.log(result.json())
-// });
 
 function handleshow(){
    
@@ -39,13 +27,9 @@ setparametr(<p>
   <h3>Refresh token : {rtoken}</h3>
   <h3>Expires in : {exptime}</h3>
   </p>);
-
-
 }   
-   
    return(
 <>
-{/* {result} */}
 <h1>Digi locker login success...!</h1>
 <button onClick={handleshow}>ShowData</button>
 

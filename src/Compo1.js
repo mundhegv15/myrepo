@@ -13,23 +13,13 @@ function Compo1()
         setClientid(e.target.value);
    }
 
-   const [matches, setMatches] = useState(
-    window.matchMedia("(min-width: 768px)").matches
-  )
-
-  useEffect(() => {
-    window
-    .matchMedia("(min-width: 768px)")
-    .addEventListener('change', e => setMatches( e.matches ));
-  }, []);
+ 
 
 
 
      return (
     <div >
-      {matches && (<h1>Big Screen</h1>)}
-      {!matches && (<h3>Small Screen</h3>)}
-    <form>
+        <form>
       <label>
           Client Id :
           <input
