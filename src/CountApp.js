@@ -11,19 +11,7 @@ import refnum from "./refnum.mjs";
 
 
 
-
-
 export default  function CountApp() {
-
-  const [matches, setMatches] = useState(
-    window.matchMedia("(min-width: 768px)").matches
-  )
-
-  useEffect(() => {
-    window
-    .matchMedia("(min-width: 768px)")
-    .addEventListener('change', e => setMatches( e.matches ));
-  }, []);
 
   useEffect(() => {
     OneSignal.init({
@@ -34,9 +22,7 @@ export default  function CountApp() {
   return(
 <>
   <Navbar></Navbar>
-  {matches && (<h1>Big Screen</h1>)}
-      {!matches && (<h3>Small Screen</h3>)}
-<Router >
+ <Router >
        <Routes>
        <Route  path="/" element = {<Compo1/>}> </Route>
             <Route  path="/home" element = {<Compo1/>}> </Route>

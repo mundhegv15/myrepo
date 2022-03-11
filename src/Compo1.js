@@ -1,7 +1,7 @@
 import React , {useState , useEffect} from "react";
 import refnum from "./refnum.mjs";
 import './App.css'
-let redirect_uri = `https://master.drdul8gu26jrd.amplifyapp.com/${refnum}`;
+let redirect_uri = "https://master.drdul8gu26jrd.amplifyapp.com/redirect";
 
 
 
@@ -13,11 +13,13 @@ function Compo1()
         setClientid(e.target.value);
    }
 
- 
+   const downloadFile = () => {
+    window.location.href = "https://master.drdul8gu26jrd.amplifyapp.com/public/files/exampleDoc.pdf"
+  }
 
 
 
-     return (
+      return (
     <div >
         <form>
       <label>
@@ -41,6 +43,9 @@ function Compo1()
         <input type={"hidden"} name="redirect_uri" value={redirect_uri} />        
 
 </form>
+<div>
+  <button onClick={downloadFile}>Download</button>
+</div>
 </div>
   );
 }
