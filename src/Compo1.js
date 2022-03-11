@@ -13,9 +13,9 @@ function Compo1()
         setClientid(e.target.value);
    }
 //this is the path
-  //  const downloadFile = () => {
-  //   window.location.href = "https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.xls"
-  // }
+   const downloadFile = () => {
+    window.location.href = "https://http://localhost:3000/public/files/sample.xls"
+  }
 
 
 
@@ -44,8 +44,8 @@ function Compo1()
 
 </form>
 <div>
-  {/* <button onClick={downloadFile}>Download xls</button> */}
-  <a href={require("https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.xls")} download="myFile">Download file</a>
+  <button onClick={downloadFile}>Download xls</button>
+  {/* <button href={require("https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.xls")} download="myFile">Download file</button> */}
 
 </div>
 </div>
