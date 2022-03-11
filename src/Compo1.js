@@ -14,7 +14,7 @@ function Compo1()
    }
 
    const downloadFile = () => {
-    window.location.href = "https://master.drdul8gu26jrd.amplifyapp.com/public/files/exampleDoc.pdf"
+    window.location.href = "https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.xls"
   }
 
 
