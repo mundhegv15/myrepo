@@ -18,7 +18,7 @@ function Compo1()
     fetch("https://master.drdul8gu26jrd.amplifyapp.com/public/files/", {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/xls',
+        'Content-Type': 'application/vnd.ms-excel',
       },
     })
     .then((response) => response.blob())
