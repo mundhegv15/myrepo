@@ -14,7 +14,7 @@ function Compo1()
    }
 //this is the path
    const downloadFile = () => {
-    window.location.href = "https://http://localhost:3000/public/files/sample.xls"
+    window.location.href = "https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.xls"
   }
 
 
