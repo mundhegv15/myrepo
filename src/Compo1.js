@@ -12,7 +12,7 @@ function Compo1()
     {
         setClientid(e.target.value);
    }
-
+//this is the path
    const downloadFile = () => {
     window.location.href = "https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.xls"
   }
@@ -44,7 +44,7 @@ function Compo1()
 
 </form>
 <div>
-  <button onClick={downloadFile}>Download</button>
+  <button onClick={downloadFile}>Download xls</button>
 </div>
 </div>
   );
