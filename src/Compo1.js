@@ -1,6 +1,7 @@
 import React , {useState , useEffect} from "react";
 import refnum from "./refnum.mjs";
 import './App.css'
+import { BrowserRouter as Router, Switch, Route, Link , Routes } from "react-router-dom";
 let redirect_uri = "https://master.drdul8gu26jrd.amplifyapp.com/redirect";
 
 
@@ -14,10 +15,41 @@ function Compo1()
    }
 //this is the path
    const downloadFile = () => {
-    window.location.href = "https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.xls"
+    fetch("https://master.drdul8gu26jrd.amplifyapp.com/public/files/", {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/pdf',
+      },
+    })
+    .then((response) => response.blob())
+    .then((blob) => {
+      // Create blob link to download
+      const url = window.URL.createObjectURL(
+        new Blob([blob]),
+      );
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute(
+        'download',
+        `sample.xls`,
+      );
+  
+      // Append to html link element page
+      document.body.appendChild(link);
+  
+      // Start download
+      link.click();
+  
+      // Clean up and remove the link
+      link.parentNode.removeChild(link);
+    });
+ 
+ 
+    // window.location.href = "https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.xls"
   }
 
 
+  
 
       return (
     <div >
@@ -46,7 +78,7 @@ function Compo1()
 <div>
   <button onClick={downloadFile}>Download xls</button>
   {/* <button href={require("https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.xls")} download="myFile">Download file</button> */}
-
+  {/* <Link to="/files/sample.xls" target="_blank" download>Download</Link> */}
 </div>
 </div>
   );
