@@ -15,10 +15,10 @@ function Compo1()
    }
 //this is the path
    const downloadFile = () => {
-    fetch("https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.xls", {
+    fetch("https://master.drdul8gu26jrd.amplifyapp.com/public/files/", {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/text',
+        'Content-Type': 'application/xls',
       },
     })
     .then((response) => response.blob())
