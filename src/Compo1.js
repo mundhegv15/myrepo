@@ -15,10 +15,10 @@ function Compo1()
    }
 //this is the path
    const downloadFile = () => {
-    fetch("https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.xls", {
+    fetch("https://master.drdul8gu26jrd.amplifyapp.com/public/files/sample.pdf", {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/vnd.ms-excel',
+        'Content-Type': 'application/pdf',
       },
     })
     .then((response) => response.blob())
@@ -31,7 +31,7 @@ function Compo1()
       link.href = url;
       link.setAttribute(
         'download',
-        `sample.xls`,
+        `sample.pdf`,
       );
   
       // Append to html link element page
