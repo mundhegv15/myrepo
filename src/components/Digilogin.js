@@ -1,7 +1,7 @@
 import React , {useState , useEffect}from 'react';
 import { useParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import './App.css'
+import '../App.css'
 
 export default function Digilogin(props)
 {
